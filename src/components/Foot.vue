@@ -2,13 +2,14 @@
   <div>
 
       <div>
-          <van-grid class="fixe" :column-num="5" >
-  <router-link to=""><van-grid-item icon="wap-home-o" text="首页"/></router-link>
-  <van-grid-item icon="search" text="百科" />
-  <van-grid-item icon="shop-o" text="商家" />
-  <van-grid-item icon="newspaper-o" text="资讯" />
-  <van-grid-item icon="user-circle-o" text="我的" />
-</van-grid>
+        <van-tabbar class="fixe" v-model="active">
+  <van-tabbar-item name="home" icon="wap-home-o">首页</van-tabbar-item>
+  <van-tabbar-item name="search" icon="search">百科</van-tabbar-item>
+  <van-tabbar-item name="friends" icon="shop-o">商家</van-tabbar-item>
+  <van-tabbar-item name="setting" icon="newspaper-o">资讯</van-tabbar-item>
+  <van-tabbar-item name="setting" icon="user-circle-o">资讯</van-tabbar-item>
+</van-tabbar>
+          
       </div>
   </div>
 </template>
@@ -23,3 +24,12 @@
 }
 
 </style>
+<script>
+export default {
+  data() {
+    return {
+      active: 'home',
+    };
+  },
+};
+</script>
