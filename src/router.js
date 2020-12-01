@@ -6,15 +6,15 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'index',
+      component: () => import('./views/index.vue'),
     },
     {
-      path: '/index',
-      name: 'index',
-      component: () => import('./views/index.vue')
+      path: '/first',
+      component: () => import('./components/first/First.vue')
     }
   ]
 })
